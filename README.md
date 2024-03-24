@@ -1,6 +1,7 @@
-# 40 - PROYECTO-Calculadora de Propinas con JSON-Server :bookmark_tabs:
+# Teórico Semana 3 Práctico 2 :bookmark_tabs:
 ~~~
-Calculadora de consumos y propinas.
+Una liga amateur de fútbol nos contrata para diseñar su sistema de gestión.
+A los organizadores de la liga le interesa registrar partidos entre equipos.
 ~~~
 ---
 <p align="center" font-weight="bold">
