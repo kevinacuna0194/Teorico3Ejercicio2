@@ -21,6 +21,22 @@ namespace Teorico3Ejercicio2
             _departamento = departamento;
         }
 
+        public void Validar()
+        {
+            ValidarNombre();
+            ValidarDepartamento();
+        }
+
+        internal void ValidarNombre()
+        {
+            if (string.IsNullOrEmpty(_nombre)) throw new Exception("Nombre del Equipo Obligatorio");
+        }
+
+        internal void ValidarDepartamento()
+        {
+            if (string.IsNullOrEmpty(_departamento)) throw new Exception("Departamento del Equipo Obligatorio");
+        }
+
         internal string Departamento
         {
             get { return _departamento; }
@@ -38,11 +54,6 @@ namespace Teorico3Ejercicio2
             return $"ID: {this._id}" +
                 $"Nombre: {this._nombre}" +
                 $"Departamento: {this._departamento}";
-        }
-
-        void IValidar.Validar()
-        {
-            throw new NotImplementedException();
         }
     }
 }

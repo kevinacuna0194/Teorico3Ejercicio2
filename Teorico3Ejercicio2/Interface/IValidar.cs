@@ -8,6 +8,6 @@ namespace Teorico3Ejercicio2.Interface
 {
     internal interface IValidar
     {
-        internal void Validar();
+        public void Validar();
     }
 }

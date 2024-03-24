@@ -14,7 +14,19 @@
             Partido partido1 = new Partido(equipo1, equipo2, DateTime.Now, 2, 1);
 
             // Mostrar el resultado del partido en consola
-            partido1.MostrarResultado();
+            
+            try
+            {   
+                equipo1.Validar();
+                equipo2.Validar();
+                partido1.Validar();
+
+                partido1.MostrarResultado();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

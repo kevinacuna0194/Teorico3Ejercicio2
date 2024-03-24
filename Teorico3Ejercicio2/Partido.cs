@@ -32,9 +32,12 @@ namespace Teorico3Ejercicio2
             _golesVisitante = golesVisitante;
         }
 
-        void IValidar.Validar()
+        public void Validar()
         {
-            this.MostrarResultado();
+            ValidarEquipoLocal();
+            ValidarEquipoVisitante();
+            ValidarGolesLocal();
+            ValidarGolesVisitante();
         }
 
         internal void MostrarResultado()
@@ -55,6 +58,26 @@ namespace Teorico3Ejercicio2
             {
                 Console.WriteLine("El resultado es un empate.");
             }
+        }
+
+        internal void ValidarGolesVisitante()
+        {
+            if (int.IsNegative(_golesVisitante)) throw new Exception("Goles Equipo Visitante Obligatorio");
+        }
+
+        internal void ValidarGolesLocal()
+        {
+            if (int.IsNegative(_golesLocal)) throw new Exception("Goles Equipo Local Obligatorio");
+        }
+
+        internal void ValidarEquipoVisitante()
+        {
+            if (_equipoVisitante == null) throw new Exception("Equipo Visitante Obligatorio");
+        }
+
+        internal void ValidarEquipoLocal()
+        {
+            if (_equipoLocal == null) throw new Exception("Equipo Local Obligatorio");
         }
     }
 }
